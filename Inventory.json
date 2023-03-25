@@ -1,0 +1,38 @@
+{
+  "rice": [
+    {
+      "name": "Basmati Rice",
+      "weight": 5,
+      "price_per_kg": 50
+    },
+    {
+      "name": "Brown Rice",
+      "weight": 3,
+      "price_per_kg": 60
+    }
+  ],
+  "pulses": [
+    {
+      "name": "Chickpeas",
+      "weight": 2,
+      "price_per_kg": 80
+    },
+    {
+      "name": "Lentils",
+      "weight": 4,
+      "price_per_kg": 60
+    }
+  ],
+  "wheats": [
+    {
+      "name": "Whole Wheat",
+      "weight": 4,
+      "price_per_kg": 30
+    },
+    {
+      "name": "Multigrain Flour",
+      "weight": 2,
+      "price_per_kg": 100
+    }
+  ]
+}
