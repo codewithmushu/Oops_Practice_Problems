@@ -36,40 +36,16 @@ namespace GameOfCards
             }
         }
 
-        public void DistributeCards(int numPlayers)
+        public Queue<Card> DealCards(int numCards)
         {
-            Card[,] playerCards = new Card[numPlayers, 9];
-            int cardIndex = 0;
-            for (int i = 0; i < numPlayers; i++)
+            Queue<Card> dealtCards = new Queue<Card>();
+            for (int i = 0; i < numCards; i++)
             {
-                for (int j = 0; j < 9; j++)
-                {
-                    playerCards[i, j] = cards[cardIndex++];
-                }
+                dealtCards.Enqueue(cards[i]);
+                cards.RemoveAt(i);
             }
-            PrintPlayerCards(playerCards);
+            return dealtCards;
         }
-
-        private void PrintPlayerCards(Card[,] playerCards)
-        {
-            for (int i = 0; i < playerCards.GetLength(0); i++)
-            {
-                Console.WriteLine("Player {0}:", i + 1);
-                for (int j = 0; j < playerCards.GetLength(1); j++)
-                {
-                    Console.WriteLine("{0} of {1}", playerCards[i, j].Rank, playerCards[i, j].Suit);
-                }
-                Console.WriteLine();
-            }
-        }
-
-
-
-
-
-
-
-
 
     }
 }
